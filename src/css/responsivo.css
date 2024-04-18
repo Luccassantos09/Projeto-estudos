@@ -1,0 +1,62 @@
+/* responsivo.css */
+
+/* Estilos para telas menores */
+@media only screen and (max-width: 768px) {
+    .cabecalho {
+        padding: 0 20px;
+    }
+
+    .cabecalho .menu li a {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .home .informacoes {
+        top: 5%;
+    }
+
+    .home .informacoes .titulo {
+        font-size: 30px;
+    }
+
+    .home .informacoes .texto {
+        font-size: 16px;
+    }
+
+    .btn-comprar {
+        padding: 15px 40px;
+        font-size: 20px;
+    }
+}
+
+/* Estilos para telas muito pequenas, como smartphones em modo paisagem */
+@media only screen and (max-width: 480px) {
+    .cabecalho {
+        padding: 0 10px;
+    }
+
+    .cabecalho .menu {
+        gap: 15px;
+    }
+
+    .cabecalho .menu li a {
+        padding: 10px;
+    }
+
+    .home .informacoes {
+        top: 3%;
+    }
+
+    .home .informacoes .titulo {
+        font-size: 24px;
+    }
+
+    .home .informacoes .texto {
+        font-size: 14px;
+    }
+
+    .btn-comprar {
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+}

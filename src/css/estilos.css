@@ -1,0 +1,134 @@
+body{
+    background-color: #8F0303;
+    color: black;
+}
+
+.cabecalho{
+    height: 50px;
+    background-color: #8F0303;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    border-bottom: 1px solid white;
+}
+
+.cabecalho .logo{
+    display: flex;
+    gap: 30px;
+    height: 45px;
+}
+
+.cabecalho .menu{
+    display: flex;
+    gap: 30px;
+    font-size: 13px;
+}
+
+.cabecalho .menu li a{
+    padding: 30px;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.cabecalho .menu li a:hover{
+    border-bottom: 2px solid white;
+}
+
+.home{
+    display: flex;
+    position: relative;
+}
+
+.home::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .7) 35%, transparent 65%);
+}
+
+.home .imagem-fundo {
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .informacoes{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 30px;
+    padding: 10px;
+    max-width: 780px;
+    width: calc(100% - 40px);
+}
+
+.home .informacoes img{
+    max-width: 100px;
+}
+
+.home .informacoes .lista-de-jogos{
+    display: flex;
+    gap: 22px;
+
+}
+
+.home .informacoes .titulo{
+    font-family:'TheAmazingSpider-Man';
+    font-size: 50px;
+}
+
+.home .informacoes .texto{
+    font-family: 'TheAmazingSpider-Man';
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.btn-comprar{
+    background-color: rgba(247, 5, 5, 0.1);
+    border: 0.2px solid black;
+    border-radius: 20px;
+    font-family: 'TheAmazingSpider-Man';
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 60px;
+    text-transform: uppercase;
+    width: 65%;
+    transition: all .3s ease-in;
+}
+
+.btn-comprar{
+    color: white;
+    width: 80%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-comprar:hover{
+    background-image: linear-gradient(to right, rgb(240, 25, 62), rgb(119, 2, 8));
+}
+.texto{
+    color: white;
+}
+
+.titulo{
+    color: white;
+}
+
+@media print {
+    .home::after {
+        display: none; /* Oculta o gradiente de fundo na impressão */
+    }
+    /* Comentar a regra abaixo para exibir a imagem de fundo na impressão */
+    /* .home .imagem-fundo {
+        display: none;  Oculta a imagem de fundo na impressão 
+    } */
+    .informacoes {
+        text-align: center; /* Centraliza as informações na impressão */
+    }
+}

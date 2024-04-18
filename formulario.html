@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-Venda</title>
+    <link rel="stylesheet" href="./src/formulario/estilo.css">
+    <link rel="stylesheet" href="./src/formulario/responsivo.css">
+</head>
+<body>
+    <form id="myForm">
+        <div class="box">
+            <form action="">
+                <fieldset>
+                    <legend><b>Formulário de Pré-Venda</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome Completo</label>  
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput">E-mail</label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                        <label for="telefone" class="labelInput">Telefone para Contato</label>
+                    </div>
+                    <br>
+                    <label for="text"><b>Data de Nascimento</b></label>
+                    <input type="date" name="data_nascimentro" id="data_nascimento" required>
+                    <br>
+                    
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="endereço" id="endereço" class="inputUser" required>
+                        <label for="endereço" class="labelInput">Endereço</label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="numero" id="numero" class="inputUser" required>
+                        <label for="numero" class="labelInput">Número</label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="bairro" id="bairro" class="inputUser" required>
+                        <label for="bairro" class="labelInput">Bairro</label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                        <label for="cidade" class="labelInput">Cidade</label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="estados" id="estados" class="inputUser" required>
+                        <label for="estados" class="labelInput">Estados</label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <select id="pais" name="pais">
+                        <label for="pais">Selecionar País</label><br>
+                            <option value="selecione">Selecione o País</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="eua">Estados Unidos</option>
+                            <option value="canada">Canadá</option>
+                            <option value="mexico">México</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="chile">Chile</option>
+                        </select>
+                    </div>
+                    <br>
+                    <input type="submit" name="submit" id="submit">
+                </fieldset>
+            </form>
+        </div>
+        <div id="result"></div>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            var result = '<h2>Compra Realizada</h2><br><h2>Dados do Formulário:</h2>';
+            for(var pair of formData.entries()) {
+                result += '<p><strong>' + pair[0] + ':</strong> ' + pair[1] + '</p>';
+            }
+            document.getElementById('result').innerHTML = result;
+        });
+    </script>
+</body>
+</html>
